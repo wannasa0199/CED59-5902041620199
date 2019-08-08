@@ -5,4 +5,8 @@ itsdangerous==1.1.0
 Jinja2==2.10.1
 MarkupSafe==1.1.1
 Werkzeug==0.15.5
+<<<<<<< HEAD
 WTForms==2.2.1
+=======
+WTForms==2.2.1
+>>>>>>> 0416c4f6f7009ecfc403ffb9220ec5104e520c11
