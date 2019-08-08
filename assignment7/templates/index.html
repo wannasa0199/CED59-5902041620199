@@ -17,28 +17,20 @@
                     alert("กรุณาป้อนนามสกุล");
                     return false;
                 }
-                var user = user;
-                Username = document.frmRegis.user.value;
+                Username = document.frmRegis.username.value;
                 if(Username.length == "")
                 {
                     alert("กรุณาป้อนชื่อผู้ใช้");
                     return false;
                 }
-                if(Username.length == username.length)
-                {
-                    alert("Username นี้มีผู้ใช้งานแล้ว");
-                    return false;
-                }
-
 				Email = document.frmRegis.email.value;
                 if(Email.length == "")
                 {
                     alert("กรุณาป้อนอีเมลล์");
                     return false;
                 }
-
                 Password = document.frmRegis.password.value;
-                if(Password.length < "")
+                if(Password.length < 8)
                 {
                     alert("กรุณาป้อนรหัสผ่านอย่างน้อย 8 ตัว");
                     return false;
