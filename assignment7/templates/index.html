@@ -2,70 +2,30 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-<script language ="JavaScript">
-        function chk()
-            {
-                Name = document.frmRegis.name.value;
-                if(Name.length == "")
-                {
-                    alert("กรุณาป้อนชื่อ");
-                    return false;
-                }
-                Surname = document.frmRegis.surname.value;
-                if(Surname.length == "")
-                {
-                    alert("กรุณาป้อนนามสกุล");
-                    return false;
-                }
-                Username = document.frmRegis.username.value;
-                if(Username.length == "")
-                {
-                    alert("กรุณาป้อนชื่อผู้ใช้");
-                    return false;
-                }
-				Email = document.frmRegis.email.value;
-                if(Email.length == "")
-                {
-                    alert("กรุณาป้อนอีเมลล์");
-                    return false;
-                }
-                Password = document.frmRegis.password.value;
-                if(Password.length < 8)
-                {
-                    alert("กรุณาป้อนรหัสผ่านอย่างน้อย 8 ตัว");
-                    return false;
-                }
-            }
-    </script>
+    <title>Register</title>
 </head>
 <body>
-<center>
-<h1>Register</h1>
- <form name="frmRegis" method="post" action="/" onsubmit="return chk()">
-     <table bgcolor="pink">
-         <tr>
-             <td>Name :</td>
-             <td><input type="text" name="name" size="40" placeholder="Name"></td>
-         </tr>
-         <tr>
-             <td>Surname :</td>
-             <td><input type="text" name="surname" size="40" placeholder="Surname"></td>
-         </tr>
-         <tr>
-             <td>Username :</td>
-             <td><input type="text" name="username" size="40" placeholder="Username"></td>
-         </tr>
-         <tr>
-             <td>Email :</td>
-             <td><input type="email" name="email" size="40" placeholder="Email"></td>
-         </tr>
-         <tr>
-             <td>Password :</td>
-             <td><input type="password" name="password" size="40" placeholder="Password"></td>
-         </tr>
-     </table>
-     <input type="submit" value="submit">
- </form>
-</center>
+
+<table border="0" width="400px" align="center">
+    <tr><td colspan="2" align="center"><h1>Register</h1></td></tr>
+    <form method="post" action="{{ url_for('register') }}">
+
+        <h2><tr><td>Name : </td><td></td></tr></h2>
+        <h2><tr><td>Lastname : </td><td></td></tr></h2>
+        <h2><tr><td>Email : </td><td></td></tr></h2>
+
+            <tr><td colspan="2" align="center"><li style="color:red"></li></td></tr>
+            <script language="JavaScript">alert("กรุณาป้อน Email ให้ถูกต้อง");</script>
+
+        <h2><tr><td>Username : </td><td>  </td></tr></h2>
+        <h2><tr><td>Password : </td><td>  </td></tr></h2>
+
+            <tr><td colspan="2" align="center"><li style="color:red"></li></td></tr>
+            <script language="JavaScript">alert("กรุณาป้อนรหัสผ่านอย่างน้อย 8-12 ตัว");</script>
+
+        <tr><td colspan="2" align="center"><input type="submit" value="Submit"/></td></tr>
+    </form>
+</table>
+</table>
 </body>
 </html>
