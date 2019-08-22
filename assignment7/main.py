@@ -29,4 +29,8 @@ def register():
 
 
 if __name__ == '__main__':
+<<<<<<< HEAD
     app.run(debug=True)
+=======
+    app.run(debug=True)
+>>>>>>> 42091e38be7747986d5ed5aa9a9af17d331c3ce0
